@@ -428,7 +428,7 @@ public class MergingDigest extends AbstractTDigest {
                 // next point will fit
                 // so merge into existing centroid
                 weight[lastUsedCell] += incomingWeight[ix];
-                mean[lastUsedCell] = mean[lastUsedCell] + (incomingMean[ix] - mean[lastUsedCell]) * incomingWeight[ix] / weight[lastUsedCell];
+                mean[lastUsedCell] += (incomingMean[ix] - mean[lastUsedCell]) * incomingWeight[ix] / weight[lastUsedCell];
                 incomingWeight[ix] = 0;
 
                 if (data != null) {
